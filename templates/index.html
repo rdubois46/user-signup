@@ -7,21 +7,21 @@
 <table>
     <tr>
         <td><p><label for="username">Username:</label></p></td>
-        <td><textarea id="username" type="text" name="username">{{username}}</textarea></td>
+        <td><input id="username" type="text" name="username" value={{username}}></td>
         {% if name_err %}
             <td><p class="error">{{name_err}}</p></td>
         {% endif %}
     </tr>
     <tr>
         <td><p><label for="password">Password:</label></p></td>
-        <td><textarea id="password" type="password" name="password"></textarea></td>
+        <td><input id="password" type="password" name="password"></input></td>
         {% if password_err %}
-            <td><p class="error">{{password_err}}</p></td>
+            <td><p class="error" color="red">{{password_err}}</p></td>
         {% endif %}
     </tr>
     <tr>
         <td><p><label for="verify">Verify Password:</label></p></td>
-        <td><textarea id="verify" type="password" name="verify"></textarea></td>
+        <td><input id="verify" type="password" name="verify"></input></td>
         {% if verify_err %}
             <td><p class="error">{{verify_err}}</p></td>
         {% endif %}
@@ -29,7 +29,7 @@
 
     <tr>
         <td><p><label for="email">Email (optional):</label></p></td>
-        <td><textarea id="email" type="text" name="email">{{email}}</textarea></td>
+        <td><input id="email" type="text" name="email" value={{email}}></td>
         {% if email_err %}
             <td><p class="error">{{email_err}}</p></td>
         {% endif %}
